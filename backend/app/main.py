@@ -9,10 +9,10 @@ app = FastAPI(
     version="1.0.0"
 )
 
-
+# deployed web site is : https://movie-review-analysis-two.vercel.app/
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # React localhost for now
+    allow_origins=["https://movie-review-analysis-two.vercel.app"],  # React localhost for now
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
