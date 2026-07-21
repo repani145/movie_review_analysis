@@ -1,8 +1,6 @@
 from pathlib import Path
-
 import joblib
-import gensim.downloader as api
-
+from app.glove_loader import load_glove
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -13,7 +11,4 @@ print("Loading Logistic Regression model...")
 classifier = joblib.load(MODEL_PATH)
 print("Model loaded successfully.")
 
-
-print("Loading GloVe model...")
-glove = api.load("glove-wiki-gigaword-100")
-print("GloVe loaded successfully.")
+glove = load_glove()

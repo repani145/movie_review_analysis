@@ -91,3 +91,7 @@ dist/
 
 *.swp
 *.swo
+
+# GloVe model files
+backend/models/glove.kv
+backend/models/glove.kv.vectors.npy
